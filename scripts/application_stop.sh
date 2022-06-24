@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo 'killall node' > deploy.log
-killall node
+echo 'killall node' > /home/ubuntu/nodejs-server-cicd/deploy.log
+killall node >> /home/ubuntu/nodejs-server-cicd/deploy.log
