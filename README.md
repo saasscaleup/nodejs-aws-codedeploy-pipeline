@@ -104,7 +104,7 @@ sudo pm2 save     # saves the running processes
 sudo pm2 startup # starts pm2 on computer boot
 ```
 
-### 7. Set node and pm2 avaiable to root
+### 7. Set node and pm2 available to root
 
 ```sh
 ln -s "$(which node)" /sbin/node
@@ -120,12 +120,27 @@ sudo yum install -y ruby
 
 ```sh
 wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/releases/codedeploy-agent_1.0-1.1597_all.deb
+```
+```sh
 mkdir codedeploy-agent_1.0-1.1597_ubuntu20
+```
+```sh
 dpkg-deb -R codedeploy-agent_1.0-1.1597_all.deb codedeploy-agent_1.0-1.1597_ubuntu20
+```
+```sh
 sed 's/2.0/2.7/' -i ./codedeploy-agent_1.0-1.1597_ubuntu20/DEBIAN/control
+```
+```sh
 dpkg-deb -b codedeploy-agent_1.0-1.1597_ubuntu20
+```
+```sh
 sudo dpkg -i codedeploy-agent_1.0-1.1597_ubuntu20.deb
+```
+```
+```sh
 sudo systemctl start codedeploy-agent
+```
+```sh
 sudo systemctl enable codedeploy-agent
 ```
 
