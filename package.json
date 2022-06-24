@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "test",
-    "start": "node app.js &"
+    "start": "node app.js > app.log 2> error.log &"
   },
   "repository": {
     "type": "git",
