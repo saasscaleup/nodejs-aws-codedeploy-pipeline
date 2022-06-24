@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'run application_stop.sh: ' >> /home/ubuntu/nodejs-server-cicd/deploy.log
+echo 'run application_stop.sh: ' > /home/ubuntu/nodejs-server-cicd/deploy.log
 
 echo 'killall node' >> /home/ubuntu/nodejs-server-cicd/deploy.log
-killall -q node
+if pgrep node; then killall node; fi >> /home/ubuntu/nodejs-server-cicd/deploy.log
