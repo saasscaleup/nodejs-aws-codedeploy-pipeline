@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo 'killall node'
+echo 'killall node' > deploy.log
 killall node
