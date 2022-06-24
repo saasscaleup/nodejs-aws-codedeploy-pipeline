@@ -4,7 +4,7 @@ const url = require('url');
 const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 
-const version = '3';
+const version = '1';
 
 const server = http.createServer((req, res) => {
     
