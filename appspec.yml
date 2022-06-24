@@ -2,12 +2,15 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/nodejs-server-v2
+    destination: /home/ubuntu/nodejs-server-cicd
 hooks:
   ApplicationStop:
-  DownloadBundle:
-  BeforeInstall:
-  Install:
+    - location: scripts/application_stop.sh
+      timeout: 300
+      runas: root
+# DownloadBundle:
+# BeforeInstall:
+# Install:
   AfterInstall:
     - location: scripts/after_install.sh
       timeout: 300
@@ -16,4 +19,4 @@ hooks:
     - location: scripts/application_start.sh
       timeout: 300
       runas: root
-  ValidateService:
+# ValidateService:
