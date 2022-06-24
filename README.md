@@ -136,7 +136,6 @@ dpkg-deb -b codedeploy-agent_1.0-1.1597_ubuntu20
 ```sh
 sudo dpkg -i codedeploy-agent_1.0-1.1597_ubuntu20.deb
 ```
-```
 ```sh
 sudo systemctl start codedeploy-agent
 ```
