@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-server-cicd",
+  "version": "1.0.0",
+  "description": "Deploy nodejs app to aws ec2 ubuntu server with aws codedeploy and aws pipeline and Github action - CI / CD tutorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saasscaleup/nodejs-server-cicd.git"
+  },
+  "keywords": [
+    "aws",
+    "aws",
+    "codedeploy",
+    "aws",
+    "pipeline",
+    "cicd",
+    "ci",
+    "cd",
+    "ci-cd",
+    "deploy",
+    "devops",
+    "nodejs",
+    "express.js"
+  ],
+  "author": "ScaleUp SaaS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saasscaleup/nodejs-server-cicd/issues"
+  },
+  "homepage": "https://github.com/saasscaleup/nodejs-server-cicd#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

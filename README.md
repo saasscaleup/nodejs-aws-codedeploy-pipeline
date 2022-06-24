@@ -107,10 +107,13 @@ sudo pm2 startup # starts pm2 on computer boot
 ### 7. Set node and pm2 available to root
 
 ```sh
-ln -s "$(which node)" /sbin/node
+sudo ln -s "$(which node)" /sbin/node
 ```
 ```sh
-ln -s "$(which pm2)" /sbin/pm2
+sudo ln -s "$(which npm)" /sbin/npm
+```
+```sh
+sudo ln -s "$(which pm2)" /sbin/pm2
 ```
 
 ### 8. Install aws code deploy agent 

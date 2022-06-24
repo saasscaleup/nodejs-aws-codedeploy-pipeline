@@ -1,4 +1,7 @@
 #!/bin/bash
 
-echo 'pm2 restart nodejs-server'
-pm2 restart nodejs-server
+echo 'cd /home/ubuntu/nodejs-server-cicd'
+cd /home/ubuntu/nodejs-server-cicd
+
+echo 'node app.js &'
+node app.js &
