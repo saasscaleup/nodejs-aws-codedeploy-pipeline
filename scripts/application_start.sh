@@ -6,4 +6,4 @@ echo 'cd /home/ubuntu/nodejs-server-cicd' >> /home/ubuntu/nodejs-server-cicd/dep
 cd /home/ubuntu/nodejs-server-cicd >> /home/ubuntu/nodejs-server-cicd/deploy.log
 
 echo 'npm start' >> /home/ubuntu/nodejs-server-cicd/deploy.log
-npm start 
+npm start >> /home/ubuntu/nodejs-server-cicd/deploy.log
