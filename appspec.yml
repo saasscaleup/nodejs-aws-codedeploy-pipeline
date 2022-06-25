@@ -6,10 +6,10 @@ files:
 hooks:
 # ApplicationStop:
 # DownloadBundle:
-  BeforeInstall:
-    - location: scripts/before_install.sh
-      timeout: 300
-      runas: root
+#  BeforeInstall:
+#    - location: scripts/before_install.sh
+#      timeout: 300
+#      runas: root
 # Install:
   AfterInstall:
     - location: scripts/after_install.sh
