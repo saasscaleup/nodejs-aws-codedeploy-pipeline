@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/nodejs-server-cicd
+    destination: /home/ec2-user/nodejs-server-cicd
 hooks:
 # ApplicationStop:
 # DownloadBundle:
