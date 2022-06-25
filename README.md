@@ -1,26 +1,31 @@
-# nodejs-server-cicd
+# nodejs-aws-codedeploy-pipeline
 
-How to set ci/cd for nodejs app with aws code deploy and aws code pipline
+How to set ci/cd for nodejs app with aws codeDeploy and aws codePipeline
 
 ## Installation instructions
 
-### 1. Launch ubuntu 20 server in aws
+### 1. Launch amazon linux server in aws
 
-### 2. ssh to ubuntu 20 to install packages
-
-```sh
-ssh -i <key.pem> ubuntu@<ip-address> -v
-```
-
-### 3. Update and Upgrade ubuntu machine and install node, nvm and pm2
+### 2. ssh to linux to install packages
 
 ```sh
-sudo apt-get update
+ssh -i <key.pem> ec2-user@<ip-address> -v
+```
+
+### 3. Update and Upgrade linux machine and install node, nvm and pm2
+
+```sh
+sudo yum update
 ```
 
 ```sh
-sudo apt-get upgrade
+sudo yum upgrade
 ```
+
+```sh
+sudo yum install -y git htop wget
+```
+
 #### 3.1 install node
 
 To **install** or **update** nvm, you should run the [install script][2]. To do that, you may either download and run the script manually, or use the following cURL or Wget command:
@@ -64,20 +69,24 @@ node --version
 npm -v
 ```
 
-### 4. Clone nodejs-server-cicd repository
+### 4. Clone nodejs-aws-codedeploy-pipeline repository
 
 ```sh
-cd /home/ubuntu
+cd /home/ec2-user
 ```
 
 ```sh
-git clone https://github.com/saasscaleup/nodejs-server-cicd.git
+git clone https://github.com/saasscaleup/nodejs-aws-codedeploy-pipeline.git
 ```
 
 ### 5. Run node app.js  (Make sure everything working)
 
 ```sh
-cd /home/ubuntu/nodejs-server-cicd
+cd nodejs-aws-codedeploy-pipeline
+```
+
+```sh
+npm install
 ```
 
 ```sh
@@ -104,7 +113,7 @@ sudo pm2 save     # saves the running processes
 sudo pm2 startup # starts pm2 on computer boot
 ```
 
-### 7. Set node and pm2 available to root
+### 7. Set node, pm2 and npm available to root
 
 ```sh
 sudo ln -s "$(which node)" /sbin/node
@@ -118,32 +127,21 @@ sudo ln -s "$(which pm2)" /sbin/pm2
 
 ### 8. Install aws code deploy agent 
 ```sh
-sudo yum install -y ruby
+sudo yum install -y ruby 
 ```
 
 ```sh
-wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/releases/codedeploy-agent_1.0-1.1597_all.deb
+wget https://aws-codedeploy-us-east-1.s3.ap-southeast-1.amazonaws.com/latest/install
+```
+
+```sh
+chmod +x ./install
 ```
 ```sh
-mkdir codedeploy-agent_1.0-1.1597_ubuntu20
+sudo ./install auto
 ```
 ```sh
-dpkg-deb -R codedeploy-agent_1.0-1.1597_all.deb codedeploy-agent_1.0-1.1597_ubuntu20
-```
-```sh
-sed 's/2.0/2.7/' -i ./codedeploy-agent_1.0-1.1597_ubuntu20/DEBIAN/control
-```
-```sh
-dpkg-deb -b codedeploy-agent_1.0-1.1597_ubuntu20
-```
-```sh
-sudo dpkg -i codedeploy-agent_1.0-1.1597_ubuntu20.deb
-```
-```sh
-sudo systemctl start codedeploy-agent
-```
-```sh
-sudo systemctl enable codedeploy-agent
+sudo service codedeploy-agent start
 ```
 
 ### 9. Continue in AWS console...

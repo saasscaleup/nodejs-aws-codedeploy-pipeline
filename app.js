@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
                     <body>
                         <h1 style="color:blue;text-align: center;margin-top: 100px;"> [Version ${version}]: This is Home Page!</h1>
                         <div style="position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%)">
-                            <img src="https://picsum.photos/500/500?random=1">
+                            <img src="https://picsum.photos/400/400?random=1">
                         </div>
                     </body>
                    </html>`);
