@@ -100,7 +100,7 @@ npm install -g pm2 # may require sudo
 
 #### 6.1 Starting the app
 ```sh
-sudo pm2 start app.js --name=nodejs-server
+sudo pm2 start app.js --name=nodejs-express-app
 ```
 ```sh
 sudo pm2 save     # saves the running processes
