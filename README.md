@@ -93,24 +93,9 @@ npm install
 node app.js
 ```
 
-### 6. Install pm2 and run as sudo (Run nodejs in background and when server restart)
+### 6. Install pm2
 ```sh
 npm install -g pm2 # may require sudo
-```
-
-#### 6.1 Starting the app
-```sh
-sudo pm2 start app.js --name=nodejs-express-app
-```
-```sh
-sudo pm2 save     # saves the running processes
-                  # if not saved, pm2 will forget
-                  # the running apps on next boot
-```
-
-#### 6.2 IMPORTANT: If you want pm2 to start on system boot
-```sh
-sudo pm2 startup # starts pm2 on computer boot
 ```
 
 ### 7. Set node, pm2 and npm available to root
@@ -125,7 +110,22 @@ sudo ln -s "$(which npm)" /sbin/npm
 sudo ln -s "$(which pm2)" /sbin/pm2
 ```
 
-### 8. Install aws code deploy agent 
+### 8 Starting the app as sudo (Run nodejs in background and when server restart)
+```sh
+sudo pm2 start app.js --name=nodejs-express-app
+```
+```sh
+sudo pm2 save     # saves the running processes
+                  # if not saved, pm2 will forget
+                  # the running apps on next boot
+```
+
+#### 8.1 IMPORTANT: If you want pm2 to start on system boot
+```sh
+sudo pm2 startup # starts pm2 on computer boot
+```
+
+### 9. Install aws code deploy agent 
 ```sh
 sudo yum install -y ruby 
 ```
@@ -144,6 +144,6 @@ sudo ./install auto
 sudo service codedeploy-agent start
 ```
 
-### 9. Continue in AWS console...
+### 10. Continue in AWS console...
 
 Watch the rest of the youtube video...
