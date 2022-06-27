@@ -131,7 +131,7 @@ sudo yum install -y ruby
 ```
 
 ```sh
-wget https://aws-codedeploy-us-east-1.s3.ap-southeast-1.amazonaws.com/latest/install
+wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
 ```
 
 ```sh
