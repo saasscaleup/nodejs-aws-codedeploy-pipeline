@@ -1,0 +1,29 @@
+name: CI/CD Pipeline
+on:
+  push:
+    branches: [ main ]
+jobs:       
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1
+    - name: Checkout to repo
+      uses: actions/checkout@v2
+
+      # Step 2
+    - name: Set AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+      # Step 3
+    - name: Create CodeDeploy Deployment
+      id: deploy
+      run: |
+        aws deploy create-deployment \
+        --application-name nodejs-express-app \
+        --deployment-group-name nodejs-express-app-cd1 \
+        --deployment-config-name CodeDeployDefault.OneAtATime \
+        --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
