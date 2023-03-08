@@ -4,22 +4,22 @@ files:
   - source: /
     destination: /home/ec2-user/nodejs-aws-codedeploy-pipeline
 hooks:
-ApplicationStop:
-   - location: scripts/echo.sh
-     timeout: 300
-     runas: root
-DownloadBundle:
-   - location: scripts/echo.sh
-     timeout: 300
-     runas: root
-BeforeInstall:
-   - location: scripts/echo.sh
-     timeout: 300
-     runas: root
-Install:
-   - location: scripts/echo.sh
-     timeout: 300
-     runas: root
+# ApplicationStop:
+#    - location: scripts/echo.sh
+#      timeout: 300
+#      runas: root
+# DownloadBundle:
+#    - location: scripts/echo.sh
+#      timeout: 300
+#      runas: root
+# BeforeInstall:
+#    - location: scripts/echo.sh
+#      timeout: 300
+#      runas: root
+# Install:
+#    - location: scripts/echo.sh
+#      timeout: 300
+#      runas: root
 AfterInstall:
     - location: scripts/after_install.sh
       timeout: 300
