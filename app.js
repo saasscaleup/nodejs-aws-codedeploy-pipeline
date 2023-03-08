@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = 'pm2 plesse';
+const version = 'seeing if restart nimber updates';
 
 app.get('/', (req, res) => {
     // set response content
