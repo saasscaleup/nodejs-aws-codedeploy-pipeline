@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/nodejs-aws-codedeploy-pipeline
-    permissions: read-all|write-all
+permissions: read-all|write-all
 hooks:
 # ApplicationStop:
 # DownloadBundle:

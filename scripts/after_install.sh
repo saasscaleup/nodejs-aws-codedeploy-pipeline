@@ -1,4 +1,4 @@
-#!/bin/bash
+
 chmod -R 777 /home/ec2-user/nodejs-aws-codedeploy-pipeline
 echo 'run after_install.sh: ' >> /home/ec2-user/nodejs-aws-codedeploy-pipeline/deploy.log
 
