@@ -3,6 +3,12 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/nodejs-aws-codedeploy-pipeline
+permissions:
+  - object: /home/ec2-user/nodejs-aws-codedeploy-pipeline
+    mode: 775
+    type:
+      - file
+      - directory
 hooks:
 # ApplicationStop:
 # DownloadBundle:
