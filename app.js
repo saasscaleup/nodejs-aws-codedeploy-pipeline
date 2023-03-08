@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = 'change to add chmod 777 and change to root';
+const version = 'cchange permoissiion';
 
 app.get('/', (req, res) => {
     // set response content
