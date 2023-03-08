@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = 'change to ec2 @ ip';
+const version = 'change to add chmod 777';
 
 app.get('/', (req, res) => {
     // set response content
