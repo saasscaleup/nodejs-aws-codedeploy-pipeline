@@ -7,17 +7,17 @@ files:
 hooks:
 # ApplicationStop:
 # DownloadBundle:
-  # BeforeInstall:
-  # - location: scripts/change_permissions.sh
-  #   timeout: 6
-  #   runas: root
+  BeforeInstall:
+   - location: scripts/change_permissions.sh
+     timeout: 6
+     runas: ec2-user
 # Install:
   AfterInstall:
    - location: scripts/after_install.sh
-      timeout: 300
-      runas: ec2-user
+     timeout: 300
+     runas: ec2-user
   ApplicationStart:
    - location: scripts/application_start.sh
-      timeout: 300
-      runas: ec2-user
+     timeout: 300
+     runas: ec2-user
 # ValidateService:
