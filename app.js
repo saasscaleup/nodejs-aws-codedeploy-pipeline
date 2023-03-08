@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = 'change permoussion in opt 123`313';
+const version = 'add thing in app start';
 
 app.get('/', (req, res) => {
     // set response content
