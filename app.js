@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = 'change to ec2-user';
+const version = 'change back to root but updated bash scipts';
 
 app.get('/', (req, res) => {
     // set response content
