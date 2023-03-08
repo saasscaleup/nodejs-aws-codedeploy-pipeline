@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = 'change to give permission to bash scrpots';
+const version = 'giver permopssion to scrpits';
 
 app.get('/', (req, res) => {
     // set response content
