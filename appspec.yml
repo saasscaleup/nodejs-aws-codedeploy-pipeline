@@ -7,7 +7,7 @@ hooks:
 # ApplicationStop:
 # DownloadBundle:
   BeforeInstall:
-  - location: change_permissions.sh
+  - location: scripts/change_permissions.sh
     timeout: 6
     runas: root
 # Install:
