@@ -1,1 +1,0 @@
-echo 'doing something with not after or start'

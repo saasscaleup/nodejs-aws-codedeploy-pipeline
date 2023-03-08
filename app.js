@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = 'cchange permoissiion run as root';
+const version = 'cchange script a bit';
 
 app.get('/', (req, res) => {
     // set response content
