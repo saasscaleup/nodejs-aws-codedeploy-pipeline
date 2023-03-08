@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = '10,000,000';
+const version = 'debugging with pm2 and processes';
 
 app.get('/', (req, res) => {
     // set response content
