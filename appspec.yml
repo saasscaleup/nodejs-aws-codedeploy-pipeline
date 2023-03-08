@@ -11,9 +11,9 @@ hooks:
 AfterInstall:
     - location: scripts/after_install.sh
       timeout: 300
-      runas: ec2-user@ip-172-31-18-96
+      runas: root
 ApplicationStart:
     - location: scripts/application_start.sh
       timeout: 300
-      runas: ec2-user@ip-172-31-18-96
+      runas: root
 # ValidateService:
