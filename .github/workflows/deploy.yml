@@ -2,6 +2,8 @@ name: CI/CD Pipeline
 on:
   push:
     branches: [ main ]
+permissions:
+  contents: read-all|write-all
 jobs:
   deploy:
     runs-on: ubuntu-latest
