@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = 'another change with pm2';
+const version = 'pm2 again ';
 
 app.get('/', (req, res) => {
     // set response content
