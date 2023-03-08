@@ -12,12 +12,12 @@ hooks:
   #   timeout: 6
   #   runas: root
 # Install:
-AfterInstall:
-    - location: scripts/after_install.sh
+  AfterInstall:
+   - location: scripts/after_install.sh
       timeout: 300
       runas: ec2-user
-ApplicationStart:
-    - location: scripts/application_start.sh
+  ApplicationStart:
+   - location: scripts/application_start.sh
       timeout: 300
       runas: ec2-user
 # ValidateService:
