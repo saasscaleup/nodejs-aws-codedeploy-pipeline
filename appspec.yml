@@ -3,19 +3,13 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/nodejs-aws-codedeploy-pipeline
-permissions:
-  - object: /home/ec2-user/nodejs-aws-codedeploy-pipeline
-    mode: 775
-    type:
-      - file
-      - directory
 hooks:
 # ApplicationStop:
 # DownloadBundle:
-  BeforeInstall:
-  - location: scripts/change_permissions.sh
-    timeout: 6
-    runas: root
+  # BeforeInstall:
+  # - location: scripts/change_permissions.sh
+  #   timeout: 6
+  #   runas: root
 # Install:
 AfterInstall:
     - location: scripts/after_install.sh
