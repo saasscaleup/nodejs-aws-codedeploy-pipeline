@@ -4,7 +4,7 @@
   "description": "Deploy nodejs app to aws ec2 ubuntu server with aws codedeploy and aws pipeline and Github action - CI / CD tutorial",
   "main": "app.js",
   "scripts": {
-    "test": "test",
+    "test": "jest",
     "start": "node app.js > app.log 2> error.log &"
   },
   "repository": {
@@ -34,5 +34,8 @@
   "homepage": "https://github.com/saasscaleup/nodejs-aws-codedeploy-pipeline#readme",
   "dependencies": {
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
