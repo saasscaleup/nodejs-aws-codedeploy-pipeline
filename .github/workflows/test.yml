@@ -6,7 +6,8 @@ on:
     branches: [ main ]
 permissions:
   contents: read
-run-jest-tests:
+jobs:
+  run-jest-tests:
     # Name of the job as it will be displayed in GitHub
     name: Jest Tests
     # Machine which this action will be run on. For a list of all the machines available/how to run on self hosted machine visit
