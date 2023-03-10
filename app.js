@@ -4,7 +4,7 @@ const hostname = '127.0.0.1'; // Your server ip address
 const port = 3000;
 // comment
 
-const version = 'testing test';
+const version = 'another test with the branch that needs test to pass';
 
 app.get('/', (req, res) => {
     // set response content
