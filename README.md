@@ -115,16 +115,19 @@ sudo ln -s "$(which pm2)" /sbin/pm2
 ### 8 Starting the app as sudo (Run nodejs in background and when server restart)
 ```sh
 sudo pm2 start app.js --name=nodejs-express-app
+pm2 start app.js --name=nodejs-express-a
 ```
 ```sh
 sudo pm2 save     # saves the running processes
                   # if not saved, pm2 will forget
                   # the running apps on next boot
+pm2 save
 ```
 
 #### 8.1 IMPORTANT: If you want pm2 to start on system boot
 ```sh
 sudo pm2 startup # starts pm2 on computer boot
+pm2 startup
 ```
 
 ### 9. Install aws code deploy agent 
