@@ -149,6 +149,10 @@ sudo ./install auto
 ```sh
 sudo service codedeploy-agent start
 ```
+```sh
+sudo service codedeploy-agent status
+```
+<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-verify.html#codedeploy-agent-operations-verify-linux"> verify the status</a>
 
 ### 10. Continue in AWS console...
 
