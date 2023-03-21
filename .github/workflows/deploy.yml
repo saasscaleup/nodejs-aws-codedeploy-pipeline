@@ -23,7 +23,7 @@ jobs:
     - name: Create CodeDeploy Deployment
       id: deploy
       run: |
-        aws deploy create-deployment \
+        aws deploy create-deployment\
         --application-name nodejs-express-app\
         --deployment-group-name nodejs-express-app-cd1\
         --deployment-config-name CodeDeployDefault.OneAtATime\
