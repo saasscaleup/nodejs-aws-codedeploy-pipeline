@@ -8,7 +8,7 @@ How to set ci/cd for nodejs app with aws codeDeploy and aws codePipeline
 
 ### 1. Launch amazon linux server in aws
 Amazon Linux 2 (ARM, x86)
-<a href ="https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent.html"> Supported Amazon EC2 AMI operating systems </a>
+<a href ="https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent.html" target="_blank"> Supported Amazon EC2 AMI operating systems </a>
 
 ### 2. ssh to linux to install packages
 
