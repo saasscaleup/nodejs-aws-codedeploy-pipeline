@@ -60,7 +60,8 @@ nvm --version
 #### 3.4 Install node
 
 ```sh
-nvm install --lts # Latest stable node js server version
+nvm install --lts # Latest stable node js server version 18.15.0, which is not well-supported, install a version which is active                                                                                                                                  
+nvm install 16.0.0
 ```
 
 #### 3.5 Check nodejs installed
