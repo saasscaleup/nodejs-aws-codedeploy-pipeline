@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
                         width: 60%;
                         border: 3px solid #73AD21;
                         padding: 10px;">
-                            <img src="https://picsum.photos/200/300?random=1" width=100% height=100%;>
+                            <img src="https://picsum.photos/25/5000?random=1" width=100% height=100%;>
                         </div>
                     </body>
                    </html>`);
