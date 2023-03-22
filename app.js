@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     // set response content    
         res.send(`<html>
                     <body>
-                        <h1 style="color:blue;text-align: center;margin-top: 100px;"> [Version ${version}]: Mr.jipx,THis is AMAZING!!! Like & Subscribe!</h1>
+                        <h1 style="color:blue;text-align: center;margin-top: 100px;"> [Version ${version}]<br/> Mr.jipx,THis is AMAZING!!! Like & Subscribe!</h1>
                         <div style="position: relative;
                         width: 400px;
                         height: 200px;
