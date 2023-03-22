@@ -10,7 +10,10 @@ app.get('/', (req, res) => {
         res.send(`<html>
                     <body>
                         <h1 style="color:blue;text-align: center;margin-top: 100px;"> [Version ${version}]: Mr.jipx,THis is AMAZING!!! Like & Subscribe!</h1>
-                        <div style="position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+                        <div style="position: relative;
+                        width: 400px;
+                        height: 200px;
+                        border: 3px solid #73AD21;">
                             <img src="https://picsum.photos/400/400?random=1">
                         </div>
                     </body>
