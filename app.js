@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   // set response content
   res.send(`<html>
                     <body>
-                        <h1 style="color:blue;text-align: center;margin-top: 100px;"> [Version ${version}]<br/> Mr.jipx,THis is AMAZING!!! Like & Subscribe!</h1>
+                        <h1 style="color:blue;text-align: center;margin-top: 100px;"> [Version ${version}]<br/> Mr.jipx,THis is AMAZING!!! EC2 needs to have profile</h1>
                         <div style="margin: auto;
                         width: 60%;
                         border: 3px solid #73AD21;
