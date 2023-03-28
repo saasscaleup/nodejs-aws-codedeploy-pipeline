@@ -7,6 +7,8 @@ How to set ci/cd for nodejs app with aws codeDeploy and aws codePipeline
 ## Installation instructions
 
 ### 1. Launch amazon linux server in aws
+Amazon Linux 2 (ARM, x86)
+<a href ="https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent.html" target="_blank"> Supported Amazon EC2 AMI operating systems </a>
 
 ### 2. ssh to linux to install packages
 
@@ -58,7 +60,8 @@ nvm --version
 #### 3.4 Install node
 
 ```sh
-nvm install --lts # Latest stable node js server version
+nvm install --lts # Latest stable node js server version 18.15.0, which is not well-supported, install a version which is active                                                                                                                                  
+nvm install 16.0.0
 ```
 
 #### 3.5 Check nodejs installed
@@ -79,6 +82,7 @@ cd /home/ec2-user
 
 ```sh
 git clone https://github.com/saasscaleup/nodejs-aws-codedeploy-pipeline.git
+git clone https://github.com/jipx/nodejs-aws-codedeploy-pipeline.git
 ```
 
 ### 5. Run node app.js  (Make sure everything working)
@@ -115,16 +119,19 @@ sudo ln -s "$(which pm2)" /sbin/pm2
 ### 8 Starting the app as sudo (Run nodejs in background and when server restart)
 ```sh
 sudo pm2 start app.js --name=nodejs-express-app
+pm2 start app.js --name=nodejs-express-app
 ```
 ```sh
 sudo pm2 save     # saves the running processes
                   # if not saved, pm2 will forget
                   # the running apps on next boot
+pm2 save
 ```
 
 #### 8.1 IMPORTANT: If you want pm2 to start on system boot
 ```sh
 sudo pm2 startup # starts pm2 on computer boot
+pm2 startup
 ```
 
 ### 9. Install aws code deploy agent 
@@ -145,6 +152,10 @@ sudo ./install auto
 ```sh
 sudo service codedeploy-agent start
 ```
+```sh
+sudo service codedeploy-agent status #check the service status
+```
+<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-verify.html#codedeploy-agent-operations-verify-linux"> verify the status</a>
 
 ### 10. Continue in AWS console...
 
